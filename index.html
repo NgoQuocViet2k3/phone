@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="mobile.js"></script>
+</head>
+<body>
+<script>
+
+    let mobileViet = new Mobile(1,[],[],[],true);
+    let mobileHieu = new Mobile(99,[],[],[],true);
+    if (mobileViet.checkStatus() === true) {
+        alert("Điện thoại đang bật ")
+    }
+    mobileViet.chargeBattery();
+    alert("Pin điện thoại còn: "+mobileViet.battery)
+    mobileViet.createMessage("Hello ");
+    mobileViet.receiveMessage("Hello bạn", mobileHieu);
+    mobileViet.sentMessage("Hello bạn", mobileViet);
+</script>
+</body>
+</html>
